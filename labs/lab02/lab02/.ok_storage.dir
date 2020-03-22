@@ -1,0 +1,4 @@
+'a_or_c-correct', (0, 70)
+'min-correct', (512, 70)
+'abs_value_equal-correct', (1024, 70)
+'mirror-correct', (1536, 70)

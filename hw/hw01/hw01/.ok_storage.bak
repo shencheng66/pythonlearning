@@ -1,0 +1,6 @@
+'odd-correct', (0, 70)
+'distance-correct', (512, 70)
+'distance3d-correct', (1024, 70)
+'diff-correct', (1536, 70)
+'a_plus_abs_b-correct', (2048, 70)
+'quadratic-correct', (2560, 70)
