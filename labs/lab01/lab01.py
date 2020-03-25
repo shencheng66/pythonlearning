@@ -27,7 +27,8 @@ def sum_digits(n):
     >>> x
     6
     """
-    "*** YOUR CODE HERE ***"
+    
+"*** YOUR CODE HERE ***"
     result = 0
     while n > 0:
         result = result + n % 10

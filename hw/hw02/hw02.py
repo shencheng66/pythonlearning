@@ -70,6 +70,9 @@ def largest_factor(n):
     8
     """
     "*** YOUR CODE HERE ***"
+    
+
+
     b = n - 1
     while b > 1:
         if (n*n-1)%b == 0:

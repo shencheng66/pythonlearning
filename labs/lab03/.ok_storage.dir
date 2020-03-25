@@ -1,0 +1,6 @@
+'squares-correct', (0, 70)
+'pairs-correct', (512, 70)
+'where_above-correct', (1024, 70)
+'closest_power_2-correct', (1536, 70)
+'second_max-correct', (2048, 70)
+'minmax-correct', (2560, 70)
