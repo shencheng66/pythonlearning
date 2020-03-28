@@ -17,7 +17,7 @@ def second_max(lst):
     """
 
     "*** YOUR CODE HERE ***"
-    def max(lst):
+    '''def max(lst):
         result = 0
         for i in lst:
             if i > result:
@@ -29,9 +29,15 @@ def second_max(lst):
     for j in lst:
         if j > result2 and j <= a:
             result2 = j
-    return result2
+    return result2'''
 
-
+    max = lst[0]
+    second_max = lst[1]
+    for i in lst[1:]:
+        if i >= max:
+            second_max = max
+            max = i
+    return second_max
 
 
 from math import sqrt
@@ -50,12 +56,15 @@ def squares(seq):
     []
     """
     "*** YOUR CODE HERE ***"
-    result = []
+    '''result = []
     for n in seq:
         if is_square(n) == True:
-            result = result + [n]
-    return result
+            result.append(n)
+    return result'''
 
+    return [x for x in seq if is_square(x)]
+    
+    
 
 
 def pairs(n):
@@ -118,7 +127,7 @@ def minmax(s):
     [-100, 100]
     """
     "*** YOUR CODE HERE ***"
-    def max(s):
+    '''def max(s):
         result = s[0]
         for i in s:
             if i > result:
@@ -132,10 +141,19 @@ def minmax(s):
                 result = j
         return result
     b = min(s)
-    return [b,a]
+    return [b,a]'''
+
+    max = s[0]
+    min = s[0]
+    for i in s:
+        if i > max:
+            max = i
+        if i < min:
+            min = i
+    return [min,max]
 
 
-# Question 6
+# Question 6s
 
 def closest_power_2(x):
     """ Returns the closest power of 2 that is less than x

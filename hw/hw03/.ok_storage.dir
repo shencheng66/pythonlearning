@@ -1,0 +1,7 @@
+'falling-correct', (0, 70)
+'nonzero-correct', (512, 70)
+'has_n-correct', (1024, 70)
+'odd_even-correct', (1536, 70)
+'classify-correct', (2048, 70)
+'decode-correct', (2560, 70)
+'hailstone-correct', (3072, 70)
