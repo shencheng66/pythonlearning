@@ -17,7 +17,7 @@ def map_and_filter(s, map_fn, filter_fn):
     """
     # BEGIN Question 0
     "*** YOUR CODE HERE ***"
-    return ['REPLACE THIS WITH YOUR LIST COMPREHENSION']
+    return [map_fn(i) for i in s if filter_fn(i)]
     # END Question 0
 
 def key_of_min_value(d):
@@ -31,7 +31,7 @@ def key_of_min_value(d):
     """
     # BEGIN Question 0
     "*** YOUR CODE HERE ***"
-    return min('REPLACE THIS WITH YOUR SOLUTION')
+    return min(d, key = lambda i: d[i])
     # END Question 0
 
 def zip(*sequences):
@@ -64,6 +64,7 @@ def enumerate(s, start=0):
     """
     # BEGIN Question 0
     "*** YOUR CODE HERE ***"
+    return zip([start + i for i in range(len(s))], s)
     # END Question 0
 
 def distance(pos1, pos2):
