@@ -52,7 +52,7 @@ def user_reviewed_restaurants(user, restaurants):
 
 def user_rating(user, restaurant_name):
     """Return the rating given for restaurant_name by user."""
-    reviewed_by_user = user_reviews(user)
+    reviewed_by_user = user_reviews(user)   
     user_review = reviewed_by_user[restaurant_name]
     return review_rating(user_review)
 
@@ -71,6 +71,7 @@ def make_restaurant(name, location, categories, price, reviews):
         'location': location,
         'categories': categories,
         'price': price,
+        'reviews': reviews
     }
 
 def restaurant_name(restaurant):
@@ -95,6 +96,8 @@ def restaurant_ratings(restaurant):
     restaurant based on the reviews of the restaurant."""
     # BEGIN Question 1
     "*** YOUR CODE HERE ***"
+    return [review_rating(r) for r in restaurant['reviews']]
+
     # END Question 1
 
 
@@ -104,10 +107,12 @@ def restaurant_num_ratings(restaurant):
     """Return the number of ratings for restaurant."""
     # BEGIN Question 2
     "*** YOUR CODE HERE ***"
+    return len(restaurant_ratings(restaurant))
     # END Question 2
 
 def restaurant_mean_rating(restaurant):
     """Return the average rating for restaurant."""
     # BEGIN Question 2
     "*** YOUR CODE HERE ***"
+    return mean(restaurant_ratings(restaurant))
     # END Question 2
