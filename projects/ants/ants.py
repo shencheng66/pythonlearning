@@ -6,6 +6,7 @@ from collections import OrderedDict
 
 ################
 # Core Classes #
+
 ################
 
 class Place(object):
