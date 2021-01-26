@@ -48,4 +48,59 @@ Suite 2
 		0
 		>>> len(place.bees)
 		1
-	
+Suite 3
+
+    >>> from ants import *
+
+	Case 2
+	    >>> beehive, layout = Hive(AssaultPlan()), dry_layout
+		>>> dimensions = (1, 9)
+		>>> colony = AntColony(None, beehive, ant_types(), layout, dimensions)
+		>>> bodyguard = BodyguardAnt()
+		>>> thrower = ThrowerAnt()
+		>>> bee = Bee(2)
+		>>> colony.places["tunnel_0_0"].add_insect(bodyguard)
+		>>> colony.places["tunnel_0_0"].add_insect(thrower)
+		>>> colony.places["tunnel_0_3"].add_insect(bee)
+		>>> bodyguard.action(colony)
+		>>> bee.armor
+		1
+
+
+Suite 3
+
+    >>> from ants import *
+
+	Case 3
+	    >>> beehive, layout = Hive(AssaultPlan()), dry_layout
+		>>> dimensions = (1, 9)
+		>>> colony = AntColony(None, beehive, ant_types(), layout, dimensions)
+		>>> bodyguard = BodyguardAnt()
+		>>> thrower = ThrowerAnt()
+		>>> bee = Bee(2)
+		>>> colony.places["tunnel_0_0"].add_insect(thrower)
+		>>> colony.places["tunnel_0_0"].add_insect(bodyguard)
+		>>> colony.places["tunnel_0_3"].add_insect(bee)
+		>>> bodyguard.action(colony)
+		>>> bee.armor
+		1
+
+
+Suite 4
+    >>> from ants import *
+	Case 3
+	    >>> beehive, layout = Hive(AssaultPlan()), dry_layout
+		>>> dimensions = (1, 9)
+		>>> colony = AntColony(None, beehive, ant_types(), layout, dimensions)
+		>>> tank = TankAnt()
+		>>> thrower = ThrowerAnt()
+		>>> place = colony.places['tunnel_0_1']
+		>>> place.add_insect(thrower)
+		>>> place.add_insect(tank)
+		>>> place.ant is tank
+		True
+		>>> bee = Bee(3)
+		>>> place.add_insect(bee)
+		>>> tank.action(colony)
+		>>> bee.armor
+		1
