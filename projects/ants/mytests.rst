@@ -104,3 +104,25 @@ Suite 4
 		>>> tank.action(colony)
 		>>> bee.armor
 		1
+
+Suite 13
+    >>> from ants import *
+	Case 1
+	    >>> import ants, importlib
+		>>> beehive, layout = Hive(AssaultPlan()), dry_layout
+		>>> dimensions = (2, 9)
+		>>> colony = AntColony(None, beehive, ant_types(), layout, dimensions)
+		>>> ants.bees_win = lambda: None
+		>>> queen = ants.QueenAnt()
+		>>> impostor = ants.QueenAnt ()
+		>>> front_ant, back_ant = ants.ThrowerAnt(), ants.ThrowerAnt()
+		>>> tunnel = [colony.places['tunnel_0_{0}'.format(i)] for i in range(9)]
+		>>> tunnel[1].add_insect(back_ant)
+		>>> tunnel[7].add_insect(front_ant)
+		>>> tunnel[4].add_insect(impostor)
+		>>> impostor.action(colony)
+		>>> impostor.armor
+		0
+		>>> tunnel[4].add_insect(queen)
+		>>> queen.action(colony)
+
